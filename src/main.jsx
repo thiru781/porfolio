@@ -7,6 +7,6 @@ import Portfolio from './Portfolio.jsx';
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
-  <Portfolio />
+  <App/>
 </BrowserRouter>
 )

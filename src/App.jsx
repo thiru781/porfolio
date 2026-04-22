@@ -430,7 +430,7 @@ export default function Portfolio() {
             </div>
 
             <div className="stats-row">
-           <button style={{background:"blue" , border:"none" ,height:"30px",width:"300px" ,borderRadius:"10px"}}><a style={{color:"white"}} href="resume.pdf" download><b>Resume</b></a></button>   
+           <button style={{background:"blue" , border:"none" ,height:"30px",width:"300px" ,borderRadius:"10px"}}><a style={{color:"white", textDecoration:"none"}} href="resume.pdf" download><b>Resume</b></a></button>   
             </div>
           </div>
 
