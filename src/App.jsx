@@ -125,9 +125,9 @@ const experiences = [
 
 const contactItems = [
   { icon: "📍", label: "Location",  val: "thirupathur,sivagangai, India" },
-  { icon: "✉️", label: "Email",     val: "thirupathiff007@gmail.com" },
-  { icon: "🐙", label: "GitHub",    val: "github.com/thiru781" },
-  { icon: "💼", label: "LinkedIn",  val: "www.linkedin.com/in/thiru-pathi" },
+  { icon: "✉️", label: "Email",     val: "mailto:thirupathiff007@gmail.com" },
+  { icon: "🐙", label: "GitHub",    val: "https://github.com/thiru781" },
+  { icon: "💼", label: "LinkedIn",  val: "https://www.linkedin.com/in/thiru-pathi" },
 ];
 
 /* ─────────────────────────────────────────
@@ -430,7 +430,24 @@ export default function Portfolio() {
             </div>
 
             <div className="stats-row">
-           <button style={{background:"blue" , border:"none" ,height:"30px",width:"300px" ,borderRadius:"10px"}}><a style={{color:"white", textDecoration:"none"}} href="resume.pdf" download><b>Resume</b></a></button>   
+           <a 
+  href="/thirupathi.pdf" 
+  download
+  style={{
+    display: "inline-block",
+    background: "#00d4ff",
+    color: "#000",
+    padding: "10px 20px",
+    borderRadius: "8px",
+    textDecoration: "none",
+    fontWeight: "600",
+    transition: "0.3s"
+  }}
+  onMouseOver={(e) => e.target.style.background = "#33dcff"}
+  onMouseOut={(e) => e.target.style.background = "#00d4ff"}
+>
+  Download Resume
+</a>   
             </div>
           </div>
 
@@ -550,7 +567,8 @@ export default function Portfolio() {
               <div className="ct-icon">{c.icon}</div>
               <div>
                 <div className="ct-lbl">{c.label}</div>
-                <div className="ct-val">{c.val}</div>
+                <div className="ct-val">
+                  <a href={c.val} style={{textDecoration:"none", color:"white"}} target="_blank">{c.val}</a></div>
               </div>
             </div>
           ))}
